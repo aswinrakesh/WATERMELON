@@ -4,49 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_foreground"
+    android:background="@drawable/image"
     tools:context="com.example.hp.jsonparsing.MainActivity">
 
-
-    <TextView
-        android:id="@+id/weathericon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="80sp"
-        android:layout_below="@+id/city"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="54dp"
-         />
-
-    <TextView
-        android:id="@+id/city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:textColor="#44ff4d"
-        android:layout_alignParentStart="true"
-        android:text="city" />
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:id="@+id/swipe"
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tempe"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/weathericon"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="80dp"
-        android:text="Temperature"
-         />
-    <Button
-        android:id="@+id/button1"
+        android:layout_alignRight="@id/city"
+        android:paddingLeft="@dimen/fab_margin"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        />
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/weathericon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="300sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@+id/city"
 
-        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="193dp"
-        android:text="CLICK ME" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:gravity="center"
+        android:text="city"
+        android:textColor="#000000"
+        android:textSize="40dp" />
 
     <Switch
         android:id="@+id/switch1"
